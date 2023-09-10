@@ -4,14 +4,16 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  
+  darkMode: 'class',
   theme: {
     extend: {
-      borderWidth: {
-        '0.5': '0.5px', // Thin border
-        // Add more custom border widths if needed
-      },
+      colors:{
+        "main":"#6e237e",
+        "sec":"#573589",
+        "mainDark":"#14141f"
+      }
     },
   },
   plugins: [],
 }
-

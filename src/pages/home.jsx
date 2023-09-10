@@ -12,6 +12,7 @@ import Loader from '../component/loader/Loader';
 
 
 function Home() {
+  const [loader,setloader]=useState(true)
   const [isShowMore, setIsShowMore] = useState(true)
 
 
@@ -111,7 +112,7 @@ text()
         <>
         
         <Project img={"./assets/qr.png"}title={"QRCODE generator by api  "} text={'QRCODE '} link={"https://karemmahmouud.netlify.app/project%20js/qurcode%20generator/qr.html"} more={"show the website "} />
-        <Project img={"./assets/stop.png"} title={"Timer and stopwatch "} text={"STOPWATCH"} link={"https://karemmahmouud.netlify.app/stop%20watch/stopwatch.html"} more={"show the website"} />
+        <Project img={"./assets/dash.png"} title={"API DASHBOARD "} text={"DASHBOARD"} link={"Dashboard"} more={"show the website"} />
         <Project img={"./assets/snake.png"} title={"SNACK GAME BY JS"} text={"SNAKE GAME"} link={"https://karemmahmouud.netlify.app/project%20js/games/index.html"} more={"show the website "}/>
         
         </>

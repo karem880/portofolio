@@ -1,0 +1,138 @@
+import { useEffect, useState } from 'react';
+import './App.css';
+import axios from 'axios';
+import './index.css';
+
+function Dash() {
+  const [products, setProducts] = useState([]);
+  const [category, setCategory] = useState('');
+  const [price, setPrice] = useState(0);
+  const [update, setUpdate] = useState(false);
+  const [selectedProductId, setSelectedProductId] = useState(null);
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const response = await axios.get("https://fakestoreapi.com/products");
+        setProducts(response.data);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    fetchData();
+  }, []);
+
+  const handleDelete = async (id) => {
+    const updatedProducts = products.filter((product) => product.id !== id);
+    setProducts(updatedProducts);
+    try {
+      await axios.delete(`https://fakestoreapi.com/products/${id}`);
+    } catch (error) {
+      console.log(`Could not delete the product`);
+    }
+  };
+
+  const handleUpdate = () => {
+   
+    const updatedProductIndex = products.findIndex((product) => product.id === selectedProductId);
+    if (updatedProductIndex !== -1) {
+      products[updatedProductIndex].category = category;
+      products[updatedProductIndex].price = price;
+      setProducts([...products]);
+      setCategory('');
+      setPrice(0);
+      setSelectedProductId(null);
+      setUpdate(false);
+    }
+  };
+
+  return (
+    <>
+      <img src="./assets/wave.svg" className='w-full object-cover absolute top-[-0px] left-0 z-[-1]' alt="" />
+      <h1 className='text-center text-main md:text-white text-4xl font-extrabold mt-32'>Product Dashboard</h1>
+
+      {update && selectedProductId !== null && (
+        <div className='felx flex-col w-full md:w-[70%] m-auto border border-main rounded-lg drop-shadow-2xl mt-[190px] h-fit p-8 justify-between bg-main'>
+          <h1 className='text-center text-white text-4xl font-bold'>Update Product</h1>
+          <input
+            type="text"
+            className='w-full rounded-md placeholder:text-md placeholder:font-extrabold bg-sec placeholder:text-center p-3 text-white placeholder:text-white h-[50px] mt-[70px] outline-none'
+            placeholder='Change category to'
+            value={category}
+            onChange={(e) => setCategory(e.target.value)}
+          />
+          <input
+            type="number"
+            className='w-full rounded-md placeholder:textmd placeholder:font-extrabold bg-sec placeholder:text-center p-3 text-white placeholder:text-white h-[50px] mt-[30px] outline-none'
+            placeholder='Change price to'
+            value={price}
+            onChange={(e) => setPrice(parseFloat(e.target.value))}
+          />
+          <form onSubmit={(e) => e.preventDefault()} className="flex flex-col justify-between h-[200px] mt-16">
+            <button
+              className="w-[90%] md:w-[50%] m-auto bg-green-500 text-white h-[50px] rounded-lg"
+              onClick={handleUpdate}
+            >
+              Save
+            </button>
+            <button
+              className='w-[90%] md:w-[50%] m-auto bg-red-500 text-white h-[50px] rounded-lg'
+              onClick={() => {
+                setCategory('');
+                setPrice(0);
+                setSelectedProductId(null);
+                setUpdate(false);
+              }}
+            >
+              Cancel
+            </button>
+          </form>
+        </div>
+      )}
+
+      <div className='mt-[200px]'>
+        <table className='w-full md:w-[80%] m-auto border drop-shadow-2xl overflow-auto'>
+          <thead>
+            <tr className='text-center bg-main text-white text-xl font-bold p-2 h-[50px]'>
+              <th>ID</th>
+              <th>Category</th>
+              <th>Price</th>
+              <th>Update</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody>
+            {products.map((item, index) => (
+              <tr key={index} className='text-center text-black font-bold mt-32 bg-white border border-main h-[50px] p-2'>
+                <td>{item.id}</td>
+                <td>{item.category}</td>
+                <td>{item.price}</td>
+                <td>
+                  <button
+                    className='rounded-md bg-green-400 text-white w-full md:w-[70%] p-2'
+                    onClick={() => {
+                      setSelectedProductId(item.id);
+                      setCategory(item.category);
+                      setPrice(item.price);
+                      setUpdate(true);
+                    }}
+                  >
+                    Update
+                  </button>
+                </td>
+                <td>
+                  <button className='rounded-md bg-red-400 text-white w-full md:w-[70%] p-2' onClick={() => handleDelete(item.id)}>Delete</button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <footer className='w-full bg-main text-white flex items-center text-2xl font-extrabold justify-center mt-32 h-[50px]' >
+        <h1>ALL COPYRIGHT TO @ <a href="https://karemmahmoud.vercel.app/">KAREM MAHMOUD</a> </h1>
+      </footer>
+    </>
+  );
+}
+
+export default Dash;
