@@ -54,9 +54,9 @@ text()
 
     <div id='about' className='flex flex-col md:flex-row  justify-around  p-1 md:p-5 md:h-[99vh] h-fit dark:bg-transparent bg-slate-700 '   >
       <div className='w-full md:w-[60%] flex flex-col justify-center leftt text-white mt-20 md:mt-0 ml-0 md:ml-52  ' >
-        <h1 className='text-white text-4xl'>Hello,iam karem</h1>
-        <h1 className='text-[40px] font-blod text-blue-400 mt-5'>student in we school </h1>
-        <h1 className='text-4xl font-blod text-white mt-5 uppercase' id='intro'>Front end Developer</h1>
+        <h1 className='text-white text-xl md:text-4xl'>Hello,iam karem</h1>
+        <h1 className='text-xl md:text-[40px] font-blod text-blue-400 mt-5'>student in we school </h1>
+        <h1 className='text-xl md:text-4xl font-blod text-white mt-5 uppercase' id='intro'>Front end Developer</h1>
         <button className='w-[150px]  h-[50px] border border-blue-400 rounded-md  mt-10 flex items-center justify-center relative  before:absolute before:bottom-0 before:w-0 before:bg-blue-500 before:h-full hover:before:w-full   transition-all duration-500 before:transition-all before:duration-500 '><a href="#" className='z-0'>veiw my work</a></button>
         <div className=' w-[70%] md:w-[30%] flex justify-between items-center mt-10 md:mt-20'>
       <a href="https://www.facebook.com/profile.php?id=100010546894506" target="_blank" rel="noopener noreferrer">
