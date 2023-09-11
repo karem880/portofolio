@@ -166,7 +166,7 @@ text()
 
         
 
-           <section className='mt-[200px] w-full bg-blue-400  dark:bg-slate-500 h-24 text-white flex items-center justify-center text-xl font-extrabold '>
+           <section className='mt-[200px] w-full bg-blue-400  dark:bg-slate-500 h-24 text-white flex items-center justify-center text-sm md:text-xl font-extrabold '>
             <h1>All COPYRIGHT FOR @ <a href="https://www.facebook.com/profile.php?id=100010546894506">KAREM MAHMOUD</a></h1>
            </section>
             
