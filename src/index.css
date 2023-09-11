@@ -6,6 +6,11 @@
     scroll-behavior: smooth;
 }
 
+.dark body{
+  @apply bg-slate-800 ;
+     /* filter: brightness(150%); */
+}
+
 #animation-img{
     animation: kk 1 18s ;
     border-radius: 50%;

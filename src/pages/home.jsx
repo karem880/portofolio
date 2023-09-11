@@ -8,13 +8,10 @@ import { BiShowAlt } from 'react-icons/bi/';
 
 
 import Navbar from '../component/navbar';
-import Loader from '../component/loader/Loader';
 
 
 function Home() {
-  const [loader,setloader]=useState(true)
   const [isShowMore, setIsShowMore] = useState(true)
-
 
 
 
@@ -55,7 +52,7 @@ text()
      <Navbar  />
     
 
-    <div id='about' className='flex flex-col md:flex-row  justify-around  p-1 md:p-5 md:h-[90vh] h-fit ' style={{ background: 'linear-gradient( to right, black, gray)' }}  >
+    <div id='about' className='flex flex-col md:flex-row  justify-around  p-1 md:p-5 md:h-[99vh] h-fit dark:bg-transparent bg-slate-700 '   >
       <div className='w-full md:w-[60%] flex flex-col justify-center leftt text-white mt-20 md:mt-0 ml-0 md:ml-52  ' >
         <h1 className='text-white text-4xl'>Hello,iam karem</h1>
         <h1 className='text-[40px] font-blod text-blue-400 mt-5'>student in we school </h1>
@@ -167,7 +164,7 @@ text()
 
         
 
-           <section className='mt-[200px] w-full bg-blue-400 h-24 text-white flex items-center justify-center text-xl font-extrabold '>
+           <section className='mt-[200px] w-full bg-blue-400  dark:bg-slate-500 h-24 text-white flex items-center justify-center text-xl font-extrabold '>
             <h1>All COPYRIGHT FOR @ <a href="https://www.facebook.com/profile.php?id=100010546894506">KAREM MAHMOUD</a></h1>
            </section>
             
@@ -179,10 +176,10 @@ export default Home;
 
 const Services = ( { icon , title , text} ) => {
   return(
-    <div className='border-[1px] topp border-gray-400  hover:scale-[1.1] mt-16 md:mt-0  duration-1000 rounded-lg bg-white drop-shadow-2xl  w-[80%] md:w-[370px] h-auto md:h-[420px] flex flex-col p-1 justify-center items-center '>
-      <h1 className='text-center text-blue-600 text-[50px]  hover:scale-[1.1]'> {icon}</h1>
-      <h1 className='text-center text-blue-500 text-2xl mt-10 font-bold '> {title}</h1>
-      <p className='text-start text-gray-700 text-md mt-5 ml-2 '>{text}</p>
+    <div className='border-[1px] topp border-gray-400  hover:scale-[1.1] mt-16 md:mt-0  duration-1000 rounded-lg dark:bg-slate-800 bg-white drop-shadow-2xl  w-[80%] md:w-[370px] h-[500px] md:h-[420px] flex flex-col p-1 justify-center items-center '>
+      <h1 className='text-center dark:text-blue-600 text-blue-600 text-[50px]  hover:scale-[1.1]'> {icon}</h1>
+      <h1 className='text-center  dark:text-gray-200 text-blue-500 text-2xl mt-10 font-bold '> {title}</h1>
+      <p className='text-start  dark:text-gray-200 text-gray-700 text-md mt-5 ml-2 '>{text}</p>
 
     </div>
   )
@@ -191,17 +188,17 @@ const Services = ( { icon , title , text} ) => {
 
 const Project = ({ title, text, link, img,more }) => {
   return (
-    <div className=" md:w-[430px] hover:scale-[1.1] rightt duration-1000 flex flex-col overflow-hidden rounded-md md:rounded-2xl border border-gray-400 drop-shadow-2xl bg-white h-auto md:h-[440px] mb-4 md:mb-0 w-[80%]">
+    <div className=" md:w-[430px] hover:scale-[1.1] rightt duration-1000 flex flex-col overflow-hidden rounded-md md:rounded-2xl border  dark:bg-slate-800 border-gray-400 drop-shadow-2xl bg-white h-[400px] md:h-[440px] mb-4 md:mb-0 w-[80%]">
       <img
         src={img}
         alt="project img"
         className="w-full flex items-center justify-center object-cover h-[65%] md:h-[70%] hover:scale-105 duration-1000"
       />
-      <p className="mt-8 text-lg font-semibold ml-3 text-black drop-shadow-2xl">
+      <p className="mt-8 text-lg dark:text-gray-200 font-semibold ml-3 text-black drop-shadow-2xl">
         {title}
       </p>
       <div className='w-full p-2  flex justify-between mt-2 items-center '>
-        <p className='text-lg md:text-2xl text-black font-bold  ml-2'>{text}</p>
+        <p className='text-lg dark:text-gray-200 md:text-2xl text-black font-bold  ml-2'>{text}</p>
         <NavLink to={link} className=" text-sm md:text-xl font-bold text-blue-500 hover:text-blue-700" >{more}</NavLink>
        
       </div>

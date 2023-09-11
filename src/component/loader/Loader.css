@@ -37,14 +37,14 @@ img {
     z-index: 99;
     animation: loaderAnimation 1s 2s forwards;
     height: 100vh;
-    position: absolute;
+    position: fixed;
     top: 0;
 
   }
   
   @keyframes loaderAnimation {
     0% {
-      height: 100%;
+      height: 150vh;
     }
     100% {
       height: 0%;

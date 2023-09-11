@@ -1,14 +1,28 @@
 import React from 'react';
 import  { useState } from 'react';
 
-import { FaBars ,FaFacebook ,FaUser,FaLinkedin, FaCode,FaVideo,FaUserGraduate  } from 'react-icons/fa';
+import { FaBars, FaSun, FaMoon } from 'react-icons/fa'; 
 
 function Navbar() {
-    const [showMenu, setShowMenu] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
+  const [darkMode, setDarkMode] = useState(false); 
+  const toggleMenu = () => {
+    setShowMenu(!showMenu);
+  };
 
-    const toggleMenu = () => {
-      setShowMenu(!showMenu);
-    };
+
+
+  const toggleDarkMode = () => {
+    const theme = localStorage.getItem("theme");
+    const newTheme = theme === "dark" ? "light" : "dark";
+  
+    localStorage.setItem("theme", newTheme);
+    document.documentElement.classList[newTheme === "dark" ? "add" : "remove"]("dark");
+    setDarkMode(newTheme === "dark");
+  };
+
+
+  
     return (
         <>
                <header className=' hidden md:flex justify-around p-5  w-full fixed top-0 left-0 bg-white z-50    items-center drop-shadow-2xl '>
@@ -18,6 +32,9 @@ function Navbar() {
                 <li className='mr-10 text-blue-500 text-xl  hover:text-blue-800'><a href="#services">services</a> </li>
                 <li className='mr-10 text-blue-500 text-xl  hover:text-blue-800'><a href="#projects">projects</a> </li>
                 <li className='mr-10 text-blue-500 text-xl  hover:text-blue-800'><a href="#contact">contact</a> </li>
+                <li className='mr-10 text-blue-500 text-xl hover:text-blue-800' onClick={toggleDarkMode}>
+            {darkMode ? <FaSun size={22} /> : <FaMoon size={22} />}
+          </li>
             </ul>
         </header>
         <nav className=' w-full fixed top-0 left-0 bg-white z-50'>

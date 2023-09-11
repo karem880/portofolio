@@ -11,13 +11,13 @@ import Loader from "./component/loader/Loader";
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   setTimeout(() => {
-    setIsLoading(false)
-  }, 5000);
+    setIsLoading(false);
+  }, 4000);
 
 
   return (
     <>
-    {/* {isLoading && <Loader />} */}
+    {isLoading && <Loader />}
     <Router>
     <Routes>
     <Route path="/" element={<Home />} />
