@@ -59,7 +59,7 @@ text()
         <div className='h-[50px] flex items-center'>
         <h1 className='text-xl md:text-4xl font-extrabold text-white mt-5 uppercase' id='intro'>Front end Developer</h1>
         </div>
-        <button className='w-[150px]  h-[50px] border border-blue-400 rounded-md  mt-10 flex items-center justify-center relative  before:absolute before:bottom-0 before:w-0 before:bg-blue-500 before:h-full hover:before:w-full   transition-all duration-500 before:transition-all before:duration-500 '><a href="#" className='z-0'>veiw my work</a></button>
+        <button className='w-[150px]  h-[50px] border border-blue-400 rounded-md  mt-10 flex items-center justify-center relative  before:absolute before:bottom-0 before:w-0 before:bg-blue-500 before:h-full hover:before:w-full   transition-all duration-500 before:transition-all before:duration-500 '><a href="#projects" className='z-0'>veiw my work</a></button>
         <div className=' w-[70%] md:w-[30%] flex justify-between items-center mt-10 md:mt-20'>
       <a href="https://www.facebook.com/profile.php?id=100010546894506" target="_blank" rel="noopener noreferrer">
         <FaFacebook    className='' size={28} />
