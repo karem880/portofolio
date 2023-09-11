@@ -15,7 +15,7 @@ img {
   .dot {
     width: 15px;
     height: 15px;
-    background-color: #23507e;
+    background-color: #fff;
     border-radius: 50%;
     margin: 0 5px;
     animation: dot-animation 2s infinite linear;
