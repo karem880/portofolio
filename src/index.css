@@ -10,6 +10,9 @@
   @apply bg-slate-800 ;
      /* filter: brightness(150%); */
 }
+body{
+  font-family: work sans;
+}
 
 #animation-img{
     animation: kk 1 18s ;

@@ -52,14 +52,14 @@ text()
      <Navbar  />
     
 
-    <div id='about' className='flex flex-col md:flex-row  justify-around  p-1 md:p-5 md:h-[99vh] h-fit dark:bg-transparent bg-slate-700 '   >
+    <div id='about' className='flex flex-col md:flex-row  justify-around  p-2 md:p-5 md:h-[99vh] h-fit dark:bg-transparent bg-slate-700 '   >
       <div className='w-full md:w-[60%] flex flex-col justify-center leftt text-white mt-20 md:mt-0 ml-0 md:ml-52  ' >
         <h1 className='text-white text-xl font-extrabold md:text-4xl'>Hello,iam karem</h1>
-        <h1 className='text-xl md:text-[40px] font-extrabold text-blue-400 mt-5'>student in we school </h1>
+        <h1 className='text-xl md:text-[40px] font-extrabold text-blue-500 dark:text-[#00ff91] mt-5'>student in we school </h1>
         <div className='h-[50px] flex items-center'>
         <h1 className='text-xl md:text-4xl font-extrabold text-white mt-5 uppercase' id='intro'>Front end Developer</h1>
         </div>
-        <button className='w-[150px]  h-[50px] border border-blue-400 rounded-md  mt-10 flex items-center justify-center relative  before:absolute before:bottom-0 before:w-0 before:bg-blue-500 before:h-full hover:before:w-full   transition-all duration-500 before:transition-all before:duration-500 '><a href="#projects" className='z-0'>veiw my work</a></button>
+        <button className='w-[150px]  h-[50px] border border-blue-400 dark:border-[#00ff91]  rounded-md  mt-10 flex items-center justify-center relative  before:absolute before:bottom-0 before:w-0 before:bg-blue-500 dark:before:bg-[#00ff91] before:h-full hover:before:w-full   transition-all duration-500 before:transition-all before:duration-500 '><a href="#projects" className='z-0'>veiw my work</a></button>
         <div className=' w-[70%] md:w-[30%] flex justify-between items-center mt-10 md:mt-20'>
       <a href="https://www.facebook.com/profile.php?id=100010546894506" target="_blank" rel="noopener noreferrer">
         <FaFacebook    className='' size={28} />
@@ -82,7 +82,7 @@ text()
      
 
      <section id='services' className='mt-[200px]'>
-      <h1 className='text-blue-500  text-center text-4xl font-bold mt-24 bottomm'>Services</h1>
+      <h1 className='text-blue-500 dark:text-[#00ff91] text-center text-4xl font-bold mt-24 bottomm'>Services</h1>
       <div className='flex flex-col justify-around  items-center md:flex-row w-[90%] m-auto mt-20'>
         <Services  icon={<FaCode />} title={"programming"} text={"Front-end development involves creating the user interface and client-side functionality of websites and web applications, encompassing everything users see and interact with in their browsers."} />
         <Services  icon={<FaUserGraduate />} title={" Course Instructor"} text={"As a Zoom Meeting Course Instructor, you'll be responsible for conducting engaging online classes, sharing valuable knowledge, and facilitating interactive discussions to ensure a productive learning experience for participants."} />
@@ -94,14 +94,14 @@ text()
         
         <section id='projects' className='mt-[200px]'>
 
-      <h1 className='text-blue-500  text-center text-4xl font-bold mt-32 bottomm'>Projects</h1>
+      <h1 className='text-blue-500 dark:text-[#00ff91] text-center text-4xl font-bold mt-32 bottomm'>Projects</h1>
       <div className='flex md:flex-row gap-10 justify-evenly items-center  w-full flex-col mt-20'>
         <Project img={"./assets/chat.png"}title={"my caht boat with open ai api  "} text={'karem caht'} link={"https://karemmahmouud.netlify.app/project%20js/chat/index.html"} more={"show the website "} />
         <Project img={"./assets/zaman.png"} title={"A website for building real estate trading "} text={"ZAMAN WEBSITE"} more={"show the website"} link={"https://zaman-web.vercel.app/"}  />
         <Project img={"/assets/we.png"} title={`We school website  "MERN STACK"`} text={"WE SCHOOL"} link={"https://we-school.vercel.app/"} more={"show the website "}/>
 
       </div>
-      <button onClick={() => { setIsShowMore(!isShowMore) }} className="bg-blue-800 mt-24 text-white drop-shadow p-2 rounded m-auto w-40 text-center flex items-center justify-center gap-2 cursor-pointer hover:scale-110 transition-all ">{isShowMore ? '  Show more  ' : 'show less'}<BiShowAlt /></button>
+      <button onClick={() => { setIsShowMore(!isShowMore) }} className="bg-blue-800 dark:bg-[#00ff91] mt-24 text-white drop-shadow p-2 rounded m-auto w-40 text-center flex items-center justify-center gap-2 cursor-pointer hover:scale-110 transition-all ">{isShowMore ? '  Show more  ' : 'show less'}<BiShowAlt /></button>
 
      
 
@@ -135,7 +135,7 @@ text()
 
 
         
-        <h1 className='text-blue-500  text-center text-4xl font-bold mt-[200px]'>Contact US</h1>
+        <h1 className='text-blue-500 dark:text-[#00ff91] text-center text-4xl font-bold mt-[200px]'>Contact US</h1>
        
         <section id="contact" className="lg:w-[50%] w-[80%] mt-20 flex flex-col md:flex-row-reverse bg-gray drop-shadow-2xl bg-white  border-0.5 border-gray-400 rounded-md m-auto justify-between p-2 md:p-10 gap-2 dark:bg-slate-700 dark:text-white">
 
@@ -146,7 +146,7 @@ text()
       <input type="text" required name="name" placeholder="Enter your name" className="w-full bg-gray-200 placeholder-black outline-none p-5 rounded-md mt-5 dark:bg-slate-800 dark:placeholder:text-white" />
       <input type="email" required name="email" placeholder="Enter your email" className="w-full bg-gray-200 placeholder-black outline-none p-5 rounded-md mt-4 dark:bg-slate-800 dark:placeholder:text-white" />
       <input type="text" required name="message" placeholder="Enter your message" className="w-full bg-gray-200 placeholder-black outline-none p-8 rounded-md mt-10 dark:bg-slate-800 dark:placeholder:text-white" />
-      <input type="submit" value="Send" className="w-full rounded-xl h-16 p-2 text-center -700 bg-blue-700 text-white mt-10" />
+      <input type="submit" value="Send" className="w-full rounded-xl h-16 p-2 text-center  dark:bg-[#00ff91] bg-blue-700 text-white mt-10" />
     </form>
   </div>
   <div className="w-full flex flex-col md:w-[45%]">
@@ -179,8 +179,8 @@ export default Home;
 const Services = ( { icon , title , text} ) => {
   return(
     <div className='border-[1px] topp border-gray-400  hover:scale-[1.1] mt-16 md:mt-0  duration-1000 rounded-lg dark:bg-slate-800 bg-white drop-shadow-2xl  w-[80%] md:w-[370px] h-[500px] md:h-[420px] flex flex-col p-1 justify-center items-center '>
-      <h1 className='text-center dark:text-blue-600 text-blue-600 text-[50px]  hover:scale-[1.1]'> {icon}</h1>
-      <h1 className='text-center  dark:text-gray-200 text-blue-500 text-2xl mt-10 font-bold '> {title}</h1>
+      <h1 className='text-center  text-blue-600  dark:text-[#00ff91] text-[50px]  hover:scale-[1.1]'> {icon}</h1>
+      <h1 className='text-center   text-blue-500 dark:text-[#00ff91] text-2xl mt-10 font-bold '> {title}</h1>
       <p className='text-start  dark:text-gray-200 text-gray-700 text-md mt-5 ml-2 '>{text}</p>
 
     </div>
@@ -201,7 +201,7 @@ const Project = ({ title, text, link, img,more }) => {
       </p>
       <div className='w-full p-2  flex justify-between mt-2 items-center '>
         <p className='text-lg dark:text-gray-200 md:text-2xl text-black font-bold  ml-2'>{text}</p>
-        <NavLink to={link} className=" text-sm md:text-xl font-bold text-blue-500 hover:text-blue-700" >{more}</NavLink>
+        <NavLink to={link} className=" text-sm md:text-xl font-bold text-blue-500 dark:text-[#00ff91] hover:text-blue-700" >{more}</NavLink>
        
       </div>
     </div>
