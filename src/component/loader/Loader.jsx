@@ -6,7 +6,7 @@ const Loader = () => (
    
     <img className="w-28 md:w-52 rounded-full z-10 bottomm" src="./assets/WhatsApp Image 2023-05-27 at 6.05.12 PM.jpeg" alt="" />
     <div className="topp">
-      <h1 className="  md:text-3xl text-white drop-shadow">   Welocle    </h1>
+      <h1 className="  md:text-3xl text-white drop-shadow">   Welocme    </h1>
       <h2 className="mt-2 text-sm md:text-2xl drop-shadow text-blue-500 font-semibold"><span className="text-white md:text-2xl  font-extrabold">iam karem mahmoud</span> <br /> Front End DEveloper </h2>
     </div>
 
