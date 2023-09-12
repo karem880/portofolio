@@ -1,7 +1,6 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import axios from 'axios';
-import './index.css';
 
 function Dash() {
   const [products, setProducts] = useState([]);
@@ -9,6 +8,8 @@ function Dash() {
   const [price, setPrice] = useState(0);
   const [update, setUpdate] = useState(false);
   const [selectedProductId, setSelectedProductId] = useState(null);
+  const [newCategory, setNewCategory] = useState(''); 
+  const [newPrice, setNewPrice] = useState(''); 
 
   useEffect(() => {
     async function fetchData() {
@@ -23,8 +24,10 @@ function Dash() {
   }, []);
 
   const handleDelete = async (id) => {
-    const updatedProducts = products.filter((product) => product.id !== id);
-    setProducts(updatedProducts);
+   const updateddata = products.filter((karem)=>karem.id !== id)
+   setProducts(updateddata)
+
+      
     try {
       await axios.delete(`https://fakestoreapi.com/products/${id}`);
     } catch (error) {
@@ -33,12 +36,12 @@ function Dash() {
   };
 
   const handleUpdate = () => {
-   
     const updatedProductIndex = products.findIndex((product) => product.id === selectedProductId);
     if (updatedProductIndex !== -1) {
-      products[updatedProductIndex].category = category;
-      products[updatedProductIndex].price = price;
-      setProducts([...products]);
+      const updatedProducts = [...products];
+      updatedProducts[updatedProductIndex].category = category;
+      updatedProducts[updatedProductIndex].price = price;
+      setProducts(updatedProducts);
       setCategory('');
       setPrice(0);
       setSelectedProductId(null);
@@ -46,8 +49,28 @@ function Dash() {
     }
   };
 
+  const handleAdd = (e) => {
+    e.preventDefault();
+    if (newCategory.trim() === "" || newPrice.trim() === "") {
+      alert("Please enter both category and price.");
+      return;
+    }
+    else{
+
+    const newProduct = {
+      id: products.length + 1,
+      category: newCategory,
+      price: parseFloat(newPrice),
+    };
+    
+    setProducts([...products.concat(newProduct)])
+    setCategory("")
+    setPrice("")
+  }
+  };
+
   return (
-    <>
+    <div>
       <img src="./assets/wave.svg" className='w-full object-cover absolute top-[-0px] left-0 z-[-1]' alt="" />
       <h1 className='text-center text-main md:text-white text-4xl font-extrabold mt-32'>Product Dashboard</h1>
 
@@ -131,7 +154,13 @@ function Dash() {
       <footer className='w-full bg-main text-white flex items-center text-2xl font-extrabold justify-center mt-32 h-[50px]' >
         <h1>ALL COPYRIGHT TO @ <a href="https://karemmahmoud.vercel.app/">KAREM MAHMOUD</a> </h1>
       </footer>
-    </>
+      
+      <form action="" onSubmit={handleAdd}>
+        <input type="text" placeholder="Category" value={newCategory} onChange={(e) => setNewCategory(e.target.value)} />
+        <input type="number" placeholder="Price" value={newPrice} onChange={(e) => setNewPrice(e.target.value)} />
+        <button type='submit'>Create</button>
+      </form>
+    </div>
   );
 }
 
