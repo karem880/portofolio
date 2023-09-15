@@ -10,6 +10,8 @@ function Dash() {
   const [selectedProductId, setSelectedProductId] = useState(null);
   const [newCategory, setNewCategory] = useState(''); 
   const [newPrice, setNewPrice] = useState(''); 
+  const [create, SetCreate] = useState(false);
+
 
   useEffect(() => {
     async function fetchData() {
@@ -46,6 +48,7 @@ function Dash() {
       setPrice(0);
       setSelectedProductId(null);
       setUpdate(false);
+
     }
   };
 
@@ -66,6 +69,7 @@ function Dash() {
     setProducts([...products.concat(newProduct)])
     setCategory("")
     setPrice("")
+    SetCreate(false)
   }
   };
 
@@ -73,6 +77,21 @@ function Dash() {
     <div>
       <img src="./assets/wave.svg" className='w-full object-cover absolute top-[-0px] left-0 z-[-1]' alt="" />
       <h1 className='text-center text-main md:text-white text-4xl font-extrabold mt-32'>Product Dashboard</h1>
+
+      {create &&(
+
+       
+         <form action="" onSubmit={handleAdd}  className='flex flex-col w-full md:w-[70%] m-auto border border-main rounded-lg drop-shadow-2xl mt-[190px] h-fit p-8 justify-between bg-main'>
+         <h1 className='text-center text-white text-4xl font-bold'>create Product</h1>
+        
+         <input type="text" placeholder="Category" className='w-full outline-none rounded-md h-[50px] mt-16'  onChange={(e) => setNewCategory(e.target.value)} />
+         <input type="number" placeholder="Price" className='w-full outline-none rounded-md h-[50px] mt-16' onChange={(e) => setNewPrice(e.target.value)} />
+         <button type='submit'  className="w-[90%] md:w-[50%] m-auto bg-green-500 text-white h-[50px] rounded-lg mt-14">Create</button>
+       </form>
+    
+
+      )}
+
 
       {update && selectedProductId !== null && (
         <div className='felx flex-col w-full md:w-[70%] m-auto border border-main rounded-lg drop-shadow-2xl mt-[190px] h-fit p-8 justify-between bg-main'>
@@ -114,7 +133,9 @@ function Dash() {
       )}
 
       <div className='mt-[200px]'>
-        <table className='w-full md:w-[80%] m-auto border drop-shadow-2xl overflow-auto'>
+        <button onClick={()=>{SetCreate(true) 
+          setUpdate(false)}} className='w-[80%] h-14 m-auto rounded-xl text-white bg-main flex items-center justify-center'> create</button>
+        <table className='w-full md:w-[80%] m-auto border mt-10 drop-shadow-2xl overflow-auto'>
           <thead>
             <tr className='text-center bg-main text-white text-xl font-bold p-2 h-[50px]'>
               <th>ID</th>
@@ -138,6 +159,8 @@ function Dash() {
                       setCategory(item.category);
                       setPrice(item.price);
                       setUpdate(true);
+                  SetCreate(false)
+                      
                     }}
                   >
                     Update
@@ -155,11 +178,7 @@ function Dash() {
         <h1>ALL COPYRIGHT TO @ <a href="https://karemmahmoud.vercel.app/">KAREM MAHMOUD</a> </h1>
       </footer>
       
-      <form action="" onSubmit={handleAdd}>
-        <input type="text" placeholder="Category" value={newCategory} onChange={(e) => setNewCategory(e.target.value)} />
-        <input type="number" placeholder="Price" value={newPrice} onChange={(e) => setNewPrice(e.target.value)} />
-        <button type='submit'>Create</button>
-      </form>
+     
     </div>
   );
 }
