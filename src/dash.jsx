@@ -26,7 +26,7 @@ function Dash() {
   }, []);
 
   const handleDelete = async (id) => {
-   const updateddata = products.filter((karem)=>karem.id !== id)
+    const updateddata =  products.filter((karem)=>karem.id !== id)
    setProducts(updateddata)
 
       
