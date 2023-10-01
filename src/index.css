@@ -145,4 +145,22 @@ body{
   }
 
   
-    
+  .animation-img {
+    animation: swim 10s infinite linear;
+  }
+  
+  @keyframes swim {
+    0%, 100% {
+      transform: translateY(0) translateX(0);
+    }
+    25% {
+      transform: translateY(-50px) translateX(50px);
+    }
+    50% {
+      transform: translateY(0) translateX(0);
+    }
+    75% {
+      transform: translateY(50px) translateX(-50px);
+    }
+  }
+  

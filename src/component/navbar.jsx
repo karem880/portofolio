@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import  { useState } from 'react';
 
 import { FaBars, FaSun, FaMoon } from 'react-icons/fa'; 
@@ -12,14 +12,21 @@ function Navbar() {
 
 
 
-  const toggleDarkMode = () => {
+
+  useEffect(() => {
     const theme = localStorage.getItem("theme");
-    const newTheme = theme === "dark" ? "light" : "dark";
-  
+    setDarkMode(theme === "dark");
+    document.documentElement.classList[theme === "dark" ? "add" : "remove"]("dark");
+  }, []);
+
+  const toggleDarkMode = () => {
+    const newTheme = darkMode ? "light" : "dark";
+
     localStorage.setItem("theme", newTheme);
     document.documentElement.classList[newTheme === "dark" ? "add" : "remove"]("dark");
     setDarkMode(newTheme === "dark");
   };
+
 
 
   

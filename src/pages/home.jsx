@@ -75,7 +75,7 @@ text()
         
       </div>
       <div className='w-full mt-24 md:mt-0 md:w-[40%] flex justify-center items-center rightt'>
-  <img className='  object-cover w-[60%] clip-zigzag' src="./assets/WhatsApp Image 2023-05-27 at 6.05.12 PM.jpeg" id='animation-img' alt="" />
+  <img className='  object-cover w-[80%] md:w-[70%] rounded-full md:rounded-2xl animation-img clip-zigzag' src="./assets/WhatsApp Image 2023-05-27 at 6.05.12 PM.jpeg" id='' alt="" />
 </div>
 
     </div>
@@ -112,7 +112,7 @@ text()
         
         <Project img={"./assets/qr.png"}title={"QRCODE generator by api  "} text={'QRCODE '} link={"https://karemmahmouud.netlify.app/project%20js/qurcode%20generator/qr.html"} more={"show the website "} />
         <Project img={"./assets/dash.png"} title={"API DASHBOARD "} text={"DASHBOARD"} link={"Dashboard"} more={"show the website"} />
-        <Project img={"./assets/snake.png"} title={"SNACK GAME BY JS"} text={"SNAKE GAME"} link={"https://karemmahmouud.netlify.app/project%20js/games/index.html"} more={"show the website "}/>
+        <Project img={"./assets/weather.png"} title={"weather APP"} text={"react weather app"} link={"https://weather-app-pro-seven.vercel.app/"} more={"show the website "}/>
         
         </>
       )}
@@ -178,7 +178,7 @@ export default Home;
 
 const Services = ( { icon , title , text} ) => {
   return(
-    <div className='border-[1px] topp border-gray-400  hover:scale-[1.1] mt-16 md:mt-0  duration-1000 rounded-lg dark:bg-slate-800 bg-white drop-shadow-2xl  w-[80%] md:w-[370px] h-[500px] md:h-[420px] flex flex-col p-1 justify-center items-center '>
+    <div className='border-[1px] topp border-gray-400  hover:scale-[1.1] mt-16 md:mt-0  duration-1000 rounded-lg dark:bg-slate-800 bg-white drop-shadow-2xl shadow-white w-[90%] md:w-[370px] h-[350px] md:h-[420px] flex flex-col p-1 justify-center items-center '>
       <h1 className='text-center  text-blue-600  dark:text-[#00ff91] text-[50px]  hover:scale-[1.1]'> {icon}</h1>
       <h1 className='text-center   text-blue-500 dark:text-[#00ff91] text-2xl mt-10 font-bold '> {title}</h1>
       <p className='text-start  dark:text-gray-200 text-gray-700 text-md mt-5 ml-2 '>{text}</p>
@@ -190,7 +190,7 @@ const Services = ( { icon , title , text} ) => {
 
 const Project = ({ title, text, link, img,more }) => {
   return (
-    <div className=" md:w-[430px] hover:scale-[1.1] rightt duration-1000 flex flex-col overflow-hidden rounded-md md:rounded-2xl border  dark:bg-slate-800 border-gray-400 drop-shadow-2xl bg-white h-[400px] md:h-[440px] mb-4 md:mb-0 w-[80%]">
+    <div className=" md:w-[430px] hover:scale-[1.1] rightt duration-1000 flex flex-col overflow-hidden rounded-md md:rounded-2xl border  dark:bg-slate-800 border-gray-400 drop-shadow-2xl bg-white h-[400px] md:h-[440px] mb-4 md:mb-0 w-[90%]">
       <img
         src={img}
         alt="project img"
