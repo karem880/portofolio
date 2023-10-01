@@ -1,7 +1,7 @@
 import  {    useState } from 'react';
-import {  FaFacebook ,FaUser,FaLinkedin, FaCode,FaVideo,FaUserGraduate  } from 'react-icons/fa';
+import {  FaFacebook ,FaUser,FaLinkedin, FaCode,FaVideo,FaUserGraduate,FaYoutubeSquare  } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
-import {  MdEditLocation,  MdPhoneBluetoothSpeaker, MdEmail } from 'react-icons/md';
+import {  MdEditLocation,  MdPhoneBluetoothSpeaker, MdEmail , } from 'react-icons/md';
 import { BiShowAlt } from 'react-icons/bi/';
 
 
@@ -68,7 +68,7 @@ text()
         <FaUser  className='' size={28} />
       </a>
       <a href="https://www.linkedin.com/in/karem-mahmoud-963b84262/" target="_blank" rel="noopener noreferrer">
-        <FaLinkedin  className='' size={28} />
+        <FaLinkedin  className=' text-shadow' size={28} />
       </a>
     
     </div>
@@ -83,13 +83,192 @@ text()
 
      <section id='services' className='mt-[200px]'>
       <h1 className='text-blue-500 dark:text-[#00ff91] text-center text-4xl font-bold mt-24 bottomm'>Services</h1>
-      <div className='flex flex-col justify-around  items-center md:flex-row w-[90%] m-auto mt-20'>
-        <Services  icon={<FaCode />} title={"programming"} text={"Front-end development involves creating the user interface and client-side functionality of websites and web applications, encompassing everything users see and interact with in their browsers."} />
-        <Services  icon={<FaUserGraduate />} title={" Course Instructor"} text={"As a Zoom Meeting Course Instructor, you'll be responsible for conducting engaging online classes, sharing valuable knowledge, and facilitating interactive discussions to ensure a productive learning experience for participants."} />
-        <Services  icon={<FaVideo />} title={"Content Creator"} text={"A Content Creator's role is to produce engaging and interactive content for websites and web applications, shaping the user interface and client-side functionality to captivate and engage users in their online experiences."} />
+      <div className='flex flex-col justify-center gap-10  items-center md:flex-row w-full m-auto mt-20 flex-wrap'>
+        
+      <Services
+  icon={<FaCode />}
+  title={"Front-End Developer "}
+  text={"Are you looking for a seasoned professional to handle your front-end development needs? Look no further! I am an experienced front-end developer ready to bring your web projects to life. With a deep understanding of user interfaces and client-side functionality, I excel in creating visually appealing and interactive experiences that captivate your audience. Let's elevate your web presence together!"}
+/>
+      <Services
+  icon={<FaCode />}
+  title={"Beginner Back-End Development "}
+  text={"Are you new to back-end development and interested in learning Node.js? Welcome aboard! This service is designed especially for beginners like you, who are eager to dive into the world of back-end web development using Node.js. You'll embark on a journey to understand the core concepts, build server-side functionality, and grasp the foundations of creating powerful web applications with Node.js."}
+/>
+<Services
+  icon={<FaUserGraduate />}
+  title={"Course Instructor"}
+  text={
+    "Are you eager to expand your horizons and acquire new skills? Join me as a Course Instructor, and together, we'll embark on a knowledge-sharing journey. In my engaging online classes, I'll provide you with the tools and insights needed for personal and professional growth. You can expect interactive sessions, expert guidance, and a supportive learning community. "
+  }
+/>
+
         
       
       </div>
+     </section>
+
+
+
+     <h1 className='text-blue-500 dark:text-[#00ff91] text-center text-4xl font-bold mt-52 bottomm'>skills</h1>
+
+     <section className="lg:w-[60%] w-[95%] mt-20 flex flex-col border   border-blue-600 dark:border-green-500  bg-gray drop-shadow-2xl shadow-slate-700 bg-white  border-0.5  rounded-md m-auto justify-between p-2 md:p-10 gap-2 dark:bg-slate-700 dark:text-white">
+
+     
+
+
+    <div className="flex flex-col items-center justify-between text-black dark:text-white w-full p-3 mt-3 rounded-full">
+      <div className="flex items-center justify-between w-full">
+        <h1>HTML</h1>
+        <h1>95%</h1>
+      </div>
+      <div className="w-full h-2 rounded-sm bg-blue-400 dark:bg-green-800 relative mt-2">
+        <div className="before:absolute before:top-0 before:left-0 before:w-[95%] rounded-full before:h-full before:bg-blue-600 before:rounded-full before:dark:bg-green-400"  ></div>
+      </div>
+    </div>
+
+
+
+
+    <div className="flex flex-col items-center justify-between text-black dark:text-white w-full p-3 mt-3 rounded-full">
+      <div className="flex items-center justify-between w-full">
+        <h1>CSS</h1>
+        <h1>90%</h1>
+      </div>
+      <div className="w-full h-2 rounded-sm bg-blue-400 dark:bg-green-800 relative mt-2">
+        <div className="before:absolute before:top-0 before:left-0 before:w-[90%] rounded-full before:h-full before:bg-blue-600 before:rounded-full before:dark:bg-green-400"  ></div>
+      </div>
+    </div>
+
+
+
+
+
+
+    <div className="flex flex-col items-center justify-between text-black dark:text-white w-full p-3 mt-3 rounded-full">
+      <div className="flex items-center justify-between w-full">
+        <h1>js</h1>
+        <h1>75%</h1>
+      </div>
+      <div className="w-full h-2 rounded-sm bg-blue-400 dark:bg-green-800 relative mt-2">
+        <div className="before:absolute before:top-0 before:left-0 before:w-[75%] rounded-full before:h-full before:bg-blue-600 before:rounded-full before:dark:bg-green-400"  ></div>
+      </div>
+    </div>
+
+
+
+
+
+    <div className="flex flex-col items-center justify-between text-black dark:text-white w-full p-3 mt-3 rounded-full">
+      <div className="flex items-center justify-between w-full">
+        <h1>Bootstrab</h1>
+        <h1>80%</h1>
+      </div>
+      <div className="w-full h-2 rounded-sm bg-blue-400 dark:bg-green-800 relative mt-2">
+        <div className="before:absolute before:top-0 before:left-0 before:w-[80%] rounded-full before:h-full before:bg-blue-600 before:rounded-full before:dark:bg-green-400"  ></div>
+      </div>
+    </div>
+
+
+
+
+    <div className="flex flex-col items-center justify-between text-black dark:text-white w-full p-3 mt-3 rounded-full">
+      <div className="flex items-center justify-between w-full">
+        <h1>TAilwind css</h1>
+        <h1>90%</h1>
+      </div>
+      <div className="w-full h-2 rounded-sm bg-blue-400 dark:bg-green-800 relative mt-2">
+        <div className="before:absolute before:top-0 before:left-0 before:w-[90%] rounded-full before:h-full before:bg-blue-600 before:rounded-full before:dark:bg-green-400"  ></div>
+      </div>
+    </div>
+
+
+
+
+    <div className="flex flex-col items-center justify-between text-black dark:text-white w-full p-3 mt-3 rounded-full">
+      <div className="flex items-center justify-between w-full">
+        <h1>React js</h1>
+        <h1>85%</h1>
+      </div>
+      <div className="w-full h-2 rounded-sm bg-blue-400 dark:bg-green-800 relative mt-2">
+        <div className="before:absolute before:top-0 before:left-0 before:w-[85%] rounded-full before:h-full before:bg-blue-600 before:rounded-full before:dark:bg-green-400"  ></div>
+      </div>
+    </div>
+
+
+    <div className="flex flex-col items-center justify-between text-black dark:text-white w-full p-3 mt-3 rounded-full">
+      <div className="flex items-center justify-between w-full">
+        <h1>python</h1>
+        <h1>70%</h1>
+      </div>
+      <div className="w-full h-2 rounded-sm bg-blue-400 dark:bg-green-800 relative mt-2">
+        <div className="before:absolute before:top-0 before:left-0 before:w-[70%] rounded-full before:h-full before:bg-blue-600 before:rounded-full before:dark:bg-green-400" ></div>
+      </div>
+    </div>
+
+
+
+
+    <div className="flex flex-col items-center justify-between text-black dark:text-white w-full p-3 mt-3 rounded-full">
+      <div className="flex items-center justify-between w-full">
+        <h1>Node js</h1>
+        <h1>50%</h1>
+      </div>
+      <div className="w-full h-2 rounded-sm bg-blue-400 dark:bg-green-800 relative mt-2">
+        <div className="before:absolute before:top-0 before:left-0 before:w-[50%] rounded-full before:h-full before:bg-blue-600 before:rounded-full before:dark:bg-green-400"  ></div>
+      </div>
+    </div>
+
+
+
+
+
+    <div className="flex flex-col items-center justify-between text-black dark:text-white w-full p-3 mt-3 rounded-full">
+      <div className="flex items-center justify-between w-full">
+        <h1>Express</h1>
+        <h1>50%</h1>
+      </div>
+      <div className="w-full h-2 rounded-sm bg-blue-400 dark:bg-green-800 relative mt-2">
+        <div className="before:absolute before:top-0 before:left-0 before:w-[50%] rounded-full before:h-full before:bg-blue-600 before:rounded-full before:dark:bg-green-400"  ></div>
+      </div>
+    </div>
+
+
+
+
+    <div className="flex flex-col items-center justify-between text-black dark:text-white w-full p-3 mt-3 rounded-full">
+      <div className="flex items-center justify-between w-full">
+        <h1>Php Basics</h1>
+        <h1>90%</h1>
+      </div>
+      <div className="w-full h-2 rounded-sm bg-blue-400 dark:bg-green-800 relative mt-2">
+        <div className="before:absolute before:top-0 before:left-0 before:w-[90%] rounded-full before:h-full before:bg-blue-600 before:rounded-full before:dark:bg-green-400"  ></div>
+      </div>
+    </div>
+
+
+
+
+
+    <div className="flex flex-col items-center justify-between text-black dark:text-white w-full p-3 mt-3 rounded-full">
+      <div className="flex items-center justify-between w-full">
+        <h1>GUI tkinter</h1>
+        <h1>50%</h1>
+      </div>
+      <div className="w-full h-2 rounded-sm bg-blue-400 dark:bg-green-800 relative mt-2">
+        <div className="before:absolute before:top-0 before:left-0 before:w-[50%] rounded-full before:h-full before:bg-blue-600 before:rounded-full before:dark:bg-green-400"  ></div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
      </section>
         
         <section id='projects' className='mt-[200px]'>
@@ -120,12 +299,7 @@ text()
 
 
 
-      <div className='flex md:felx-row justify-between items-center w-[80%] felx-col'>
-
-
-        
-
-      </div>
+    
 
 
 
@@ -137,7 +311,7 @@ text()
         
         <h1 className='text-blue-500 dark:text-[#00ff91] text-center text-4xl font-bold mt-[200px]'>Contact US</h1>
        
-        <section id="contact" className="lg:w-[50%] w-[80%] mt-20 flex flex-col md:flex-row-reverse bg-gray drop-shadow-2xl bg-white  border-0.5 border-gray-400 rounded-md m-auto justify-between p-2 md:p-10 gap-2 dark:bg-slate-700 dark:text-white">
+        <section id="contact" className="lg:w-[50%] w-[80%] mt-20 flex flex-col border  border-blue-600 dark:border-green-500 md:flex-row-reverse bg-gray drop-shadow-2xl bg-white  border-0.5  rounded-md m-auto justify-between p-2 md:p-10 gap-2 dark:bg-slate-700 dark:text-white">
 
   <div className="w-full flex flex-col md:w-[45%]">
     <h1 className="p-2 text-blue-700 dark:text-sec text-4xl">Contact </h1>
@@ -178,14 +352,15 @@ export default Home;
 
 const Services = ( { icon , title , text} ) => {
   return(
-    <div className='border-[1px] topp border-gray-400  hover:scale-[1.1] mt-16 md:mt-0  duration-1000 rounded-lg dark:bg-slate-800 bg-white drop-shadow-2xl shadow-white w-[90%] md:w-[370px] h-[350px] md:h-[420px] flex flex-col p-1 justify-center items-center '>
+    <div className='border topp border-blue-500 dark:border-gray-400  hover:scale-[1.1] mt-16 md:mt-0  duration-1000 rounded-lg dark:bg-gradient-to-br from-slate-800 via-slate-600 to-slate-700 bg-white drop-shadow-2xl shadow-white w-[90%] md:w-[370px] min-h-[350px] md:min-h-[420px] flex flex-col p-1 justify-center items-center '>
       <h1 className='text-center  text-blue-600  dark:text-[#00ff91] text-[50px]  hover:scale-[1.1]'> {icon}</h1>
       <h1 className='text-center   text-blue-500 dark:text-[#00ff91] text-2xl mt-10 font-bold '> {title}</h1>
-      <p className='text-start  dark:text-gray-200 text-gray-700 text-md mt-5 ml-2 '>{text}</p>
+      <p className='text-center  dark:text-gray-200 text-gray-700 text-md mt-5 ml-2 '>{text}</p>
 
     </div>
   )
 }
+
 
 
 const Project = ({ title, text, link, img,more }) => {
@@ -207,6 +382,9 @@ const Project = ({ title, text, link, img,more }) => {
     </div>
   );
 };
+
+
+
 const ContactInfo = ({ icon, text }) => {
   return (
     <div className="w-full h-[40%] flex flex-row justify-start items-center mt-10">
@@ -217,3 +395,5 @@ const ContactInfo = ({ icon, text }) => {
     </div>
   );
 };
+
+

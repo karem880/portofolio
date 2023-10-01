@@ -40,7 +40,7 @@ function Navbar() {
                 <li className='mr-10 dark:text-white dark:hover:text-gray-300 text-blue-500 text-xl  hover:text-blue-800'><a href="#projects">projects</a> </li>
                 <li className='mr-10 dark:text-white dark:hover:text-gray-300 text-blue-500 text-xl  hover:text-blue-800'><a href="#contact">contact</a> </li>
                 <li className='mr-10 text-xl cursor-pointer ' onClick={toggleDarkMode}>
-            {darkMode ? <FaSun size={22} color='gold' /> : <FaMoon size={22} color='balck' />}
+            {darkMode ? <FaSun size={22} color='gold' /> : <FaMoon size={22} color='' className='text-gray-500' />}
           </li>
             </ul>
         </header>
@@ -57,7 +57,7 @@ function Navbar() {
          <li className='mt-5 text-white text-xl hover:scale-[1.1] hover:text-blue-800'><a href="#projects">projects</a></li>
          <li className='mt-5 text-white text-xl hover:scale-[1.1] hover:text-blue-800'><a href="#contact">contact</a></li>
          <li className='mr-10 mt-5  text-xl hover:scale-105 cursor-pointer' onClick={toggleDarkMode}>
-         {darkMode ? <FaSun size={22} color='gold' /> : <FaMoon size={22} color='balck' />}
+         {darkMode ? <FaSun size={22} color='gold' /> : <FaMoon size={22}  className='text-gray-500' />}
           </li>
        </ul>
       )}
