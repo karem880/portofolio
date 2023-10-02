@@ -8,6 +8,8 @@ import { BiShowAlt } from 'react-icons/bi/';
 
 
 import Navbar from '../component/navbar';
+import ContactInfo from '../component/ContactInfo';
+import Project from '../component/Project';
 
 
 function Home() {
@@ -81,7 +83,7 @@ text()
     </div>
      
 
-     <section id='services' className='mt-[200px]'>
+     <section id='services' className='mt-[200px] bg-gradient-to-br flex flex-col items-center min-h-[500px]'>
       <h1 className='text-blue-500 dark:text-[#00ff91] text-center text-4xl font-bold mt-24 bottomm'>Services</h1>
       <div className='flex flex-col justify-center gap-10  items-center md:flex-row w-full m-auto mt-20 flex-wrap'>
         
@@ -110,7 +112,7 @@ text()
 
 
 
-     <h1 className='text-blue-500 dark:text-[#00ff91] text-center text-4xl font-bold mt-52 bottomm'>skills</h1>
+     <h1 className='text-blue-500 dark:text-[#00ff91] text-center text-4xl font-bold mt-24 bottomm'>skills</h1>
 
      <section className="lg:w-[60%] w-[95%] mt-20 flex flex-col border   border-blue-600 dark:border-green-500  bg-gray drop-shadow-2xl shadow-slate-700 bg-white  border-0.5  rounded-md m-auto justify-between p-2 md:p-10 gap-2 dark:bg-slate-700 dark:text-white">
 
@@ -363,37 +365,9 @@ const Services = ( { icon , title , text} ) => {
 
 
 
-const Project = ({ title, text, link, img,more }) => {
-  return (
-    <div className=" md:w-[430px] hover:scale-[1.1] rightt duration-1000 flex flex-col overflow-hidden rounded-md md:rounded-2xl border  dark:bg-slate-800 border-gray-400 drop-shadow-2xl bg-white h-[400px] md:h-[440px] mb-4 md:mb-0 w-[90%]">
-      <img
-        src={img}
-        alt="project img"
-        className="w-full flex items-center justify-center object-cover h-[65%] md:h-[70%] hover:scale-105 duration-1000"
-      />
-      <p className="mt-8 text-lg dark:text-gray-200 font-semibold ml-3 text-black drop-shadow-2xl">
-        {title}
-      </p>
-      <div className='w-full p-2  flex justify-between mt-2 items-center '>
-        <p className='text-lg dark:text-gray-200 md:text-2xl text-black font-bold  ml-2'>{text}</p>
-        <NavLink to={link} className=" text-sm md:text-xl font-bold text-blue-500 dark:text-[#00ff91] hover:text-blue-700" >{more}</NavLink>
-       
-      </div>
-    </div>
-  );
-};
 
 
 
-const ContactInfo = ({ icon, text }) => {
-  return (
-    <div className="w-full h-[40%] flex flex-row justify-start items-center mt-10">
-      <div className="text-blue-700 bg-[#bdd8f4] rounded-[50px] w-[50px] h-[50px] flex justify-center items-center text-sm md:text-2xl">
-        {icon}
-      </div>
-      <p className="ml-0 text-md md:text-xl md:ml-10">{text}</p>
-    </div>
-  );
-};
+
 
 
