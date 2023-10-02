@@ -316,7 +316,7 @@ text()
         <section id="contact" className="lg:w-[50%] w-[80%] mt-20 flex flex-col border  border-blue-600 dark:border-green-500 md:flex-row-reverse bg-gray drop-shadow-2xl bg-white  border-0.5  rounded-md m-auto justify-between p-2 md:p-10 gap-2 dark:bg-slate-700 dark:text-white">
 
   <div className="w-full flex flex-col md:w-[45%]">
-    <h1 className="p-2 text-blue-700 dark:text-sec text-4xl">Contact </h1>
+    <h1 className="p-2 text-blue-700 dark:text-green-500 text-4xl">Contact </h1>
     <p className="text-md md:text-2xl p-2">We are here for you. How can we assist you?</p>
     <form onSubmit={handleSubmit} className="mt-5">
       <input type="text" required name="name" placeholder="Enter your name" className="w-full bg-gray-200 placeholder-black outline-none p-5 rounded-md mt-5 dark:bg-slate-800 dark:placeholder:text-white" />
