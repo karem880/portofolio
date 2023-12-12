@@ -163,4 +163,22 @@ body{
       transform: translateY(50px) translateX(-50px);
     }
   }
+
+  @keyframes fadeInUp {
+    from {
+      transform: translateY(200px);
+      transform: translateX(200px);
+    }
+    to {
+      transform: translateY(0);
+      transform: translateX(0);
+
+    }
+  }
+  
+  .animate-section-visible {
+    animation: fadeInUp 1s ;
+  }
+  
+  /* Add the rest of your existing styles... */
   

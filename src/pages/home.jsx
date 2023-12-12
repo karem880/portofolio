@@ -77,7 +77,7 @@ text()
         
       </div>
       <div className='w-full mt-24 md:mt-0 md:w-[40%] flex justify-center items-center rightt'>
-  <img className='  object-cover w-[80%] md:w-[70%] rounded-full md:rounded-2xl animation-img clip-zigzag' src="./assets/WhatsApp Image 2023-05-27 at 6.05.12 PM.jpeg" id='' alt="" />
+  <img className='  object-cover w-full  rounded-full md:rounded-2xl clip-zigzag' src="./assets/karam.png" id='' alt="" />
 </div>
 
     </div>
@@ -163,7 +163,7 @@ text()
 
     <div className="flex flex-col items-center justify-between text-black dark:text-white w-full p-3 mt-3 rounded-full">
       <div className="flex items-center justify-between w-full">
-        <h1>Bootstrab</h1>
+        <h1>Bootstrap</h1>
         <h1>80%</h1>
       </div>
       <div className="w-full h-2 rounded-sm bg-blue-400 dark:bg-green-800 relative mt-2">
